@@ -30,7 +30,7 @@ body {
   -webkit-backdrop-filter: blur(4.4px);
   position: relative;
 }
-.logo {
+.logo img {
   width: 50px;
   display: inline-block;
 }
