@@ -1,11 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
+  font-family: "Elms Sans", sans-serif;
+  text-decoration: none;
+  color: white;
 }
 body {
-  background-color: black;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  background-image: url("/stock/bg.jpg");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sidebar {
+  height: 100%;
+  width: 20%;
+  background: #00000083;
+  border-radius: 0 16px 16px 0;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  position: relative;
+}
+.logo {
+  width: 50px;
+  display: inline-block;
+}
+#toggle-sidebar {
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+  top: 0rem;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main nav {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(240, 240, 240);
+}
+.chatbar {
+  width: 600px;
+  height: 50px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.4px);
+  -webkit-backdrop-filter: blur(15.4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+.chatbar input {
+  width: 600px;
+  height: 50px;
+  width: 98%;
+  height: 80%;
+  font-size: 15px;
+  background: transparent;
+  color: white;
+  caret-color: #ff5900;
+  filter: drop-shadow(0 0 3px #ff5900);
+}
+.chatbar input:focus {
+  outline: 0;
+  border: 0;
+}
+#send_icon {
+  color: white;
+  font-size: 1.75rem;
+  position: absolute;
+  right: 1rem;
+  top: 10%;
 }
